@@ -7,14 +7,15 @@ from tkinter import ttk
 
 ---
 
-# 📂 Módulos Adicionais do Tkinter
+# Módulos Adicionais do Tkinter
 
-## 1️⃣ tkinter (Módulo Principal)  
+## 1 tkinter (Módulo Principal)  
 O núcleo do Tkinter, que permite criar **interfaces gráficas (GUI)** em Python.  
 
-## 2️⃣ tkinter.ttk  
-✅ Alternativa mais moderna ao `tkinter`, oferecendo **widgets estilizados**.  
-✅ **Exemplo:**  
+## 2 tkinter.ttk  
+Alternativa mais moderna ao `tkinter`, oferecendo **widgets estilizados**.  
+
+**Exemplo:**  
 
 ```python
 from tkinter import Tk, ttk
@@ -27,12 +28,13 @@ root.mainloop()
 
 ---
 
-## 3️⃣ tkinter.commondialog  
-✅ **Classe base** para os diálogos de outros módulos.
+## 3 tkinter.commondialog  
+Classe base para os diálogos de outros módulos.
 
-## 4️⃣ tkinter.colorchooser  
-✅ Exibe uma **caixa de diálogo para escolher cores**.  
-✅ **Exemplo:**  
+## 4 tkinter.colorchooser  
+Exibe uma **caixa de diálogo para escolher cores**.  
+
+**Exemplo:**  
 
 ```python
 from tkinter import Tk, colorchooser
@@ -46,9 +48,10 @@ print("Cor escolhida:", cor)
 
 ---
 
-## 5️⃣ tkinter.filedialog  
-✅ Permite abrir/selecionar arquivos.  
-✅ **Exemplo:**  
+## 5 tkinter.filedialog  
+Permite abrir/selecionar arquivos.  
+
+**Exemplo:**  
 
 ```python
 from tkinter import Tk, filedialog
@@ -62,9 +65,10 @@ print("Arquivo selecionado:", arquivo)
 
 ---
 
-## 6️⃣ tkinter.font  
-✅ Permite **personalizar fontes** no Tkinter.  
-✅ **Exemplo:**  
+## 6 tkinter.font  
+Permite **personalizar fontes** no Tkinter.  
+
+**Exemplo:**  
 
 ```python
 from tkinter import Tk, Label
@@ -79,9 +83,10 @@ root.mainloop()
 
 ---
 
-## 7️⃣ tkinter.messagebox  
-✅ Exibe **mensagens de alerta** ou notificações.  
-✅ **Exemplo:**  
+## 7 tkinter.messagebox  
+Exibe **mensagens de alerta** ou notificações.  
+
+**Exemplo:**  
 
 ```python
 from tkinter import Tk, messagebox
@@ -94,14 +99,15 @@ messagebox.showinfo("Informação", "Isso é uma mensagem de alerta!")
 
 ---
 
-## 8️⃣ tkinter.scrolledtext  
-✅ Adiciona uma **área de texto com rolagem automática**.  
+## 8 tkinter.scrolledtext  
+Adiciona uma **área de texto com rolagem automática**.  
 
 ---
 
-## 9️⃣ tkinter.simpledialog  
-✅ Fornece **diálogos básicos para entrada de dados**.  
-✅ **Exemplo:**  
+## 9 tkinter.simpledialog  
+Fornece **diálogos básicos para entrada de dados**.  
+
+**Exemplo:**  
 
 ```python
 from tkinter import Tk, simpledialog
@@ -114,10 +120,3 @@ print("Nome digitado:", nome)
 ```
 
 ---
-
-### **📌 Conclusão**  
-- Agora o arquivo tem **explicações mais claras** e **exemplos práticos**.  
-- Isso facilita o aprendizado e deixa o repositório **mais didático**.  
-
-🚀😃
-
