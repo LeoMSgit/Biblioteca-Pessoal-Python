@@ -1,4 +1,4 @@
-# 📌 Importação do Módulo Tkinter
+# Importação do Módulo Tkinter
 
 ```python
 from tkinter import *
