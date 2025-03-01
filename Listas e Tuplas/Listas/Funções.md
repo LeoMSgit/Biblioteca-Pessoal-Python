@@ -32,9 +32,9 @@ print(selecionados)  # Saída: ['y', 'h', 'n']
 
 - Podemos selecionar determinados segmentos da lista utilizando comandos como: 
 
-- `[N:]` → Elementos a partir do índice `N`.
-- `[:N]` → Elementos do início até `N-1`.
-- `[N:X]` → Elementos entre `N` e `X-1`.
+- `[N:]` → Elementos a partir do índice `N`
+- `[:N]` → Elementos do início até `N-1`
+- `[N:X]` → Elementos entre `N` e `X-1`
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n"]
