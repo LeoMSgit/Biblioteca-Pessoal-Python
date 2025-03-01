@@ -87,7 +87,9 @@ Ex.: Matriz = [
 
 ## 3.1) Acessando Matrizes
 
-- Para acessar um elemento de uma estrutura bidimensional utilizamos como parâmetros a qual das listas ele pertence e a posição do elemento
+- Para acessar um elemento de uma estrutura bidimensional utilizamos dois parâmetros:
+  - A posição da sublista na lista mãe
+  - A posição do elemento dentro de sua respectiva sublista
 
 ```python
 Ex.: Matriz[0]  # Saída: [1, 2, 3]    OU SEJA a LISTA na POSIÇÃO 0
