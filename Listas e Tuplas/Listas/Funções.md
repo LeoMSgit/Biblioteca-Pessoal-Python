@@ -1,41 +1,68 @@
-1) Definição
-- lista = ["elemento1", "elemento2", "elemento3", ..., "elementoN"]
-- lista = list("Python"), irá criar uma lista onde cada letra do parâmetro "Python" será um item na nova lista
-   - lista_nova = ["P", "y", "t", "h", "o", "n"]
+# Manipulação de Listas em Python
 
-2) Seleção de Elementos por Posição
-- Para selecionar um elemento da lista utilizamos "lista[N]", onde N é a posição do elemento a ser selecionado
-   - Lembrando que Python é 0-Based, logo, o Primeiro elemento da Lista é o de numeração 0 e as contagens de N vão até N-1
+## 1) Definição
 
-Ex.: lista = ["P", "y", "t", "h", "o", "n"]
-lista[2] = "t"
+```python
+lista = ["elemento1", "elemento2", "elemento3", ..., "elementoN"]
+lista = list("Python")  # Cria uma lista onde cada letra da string se torna um elemento
+print(lista)  # Saída: ['P', 'y', 't', 'h', 'o', 'n']
+```
 
+## 2) Seleção de Elementos por Posição
 
-2.1) Múltiplos Elementos
-- Para selecionar múltiplos elementos podemos pegá-los individualmente pelas suas posições
+- O primeiro elemento tem índice **0** (Python usa indexação baseada em zero).
+- Acessamos um elemento com `lista[N]`.
 
-Ex.: lista = ["P", "y", "t", "h", "o", "n"]
-lista[1, 3, 5] = "y", "h", "n"
+```python
+lista = ["P", "y", "t", "h", "o", "n"]
+print(lista[2])  # Saída: 't'
+```
 
-- Outro método é determinar um segmento da lista utilizando [:]
-   - [N:] seleciona todos os elementos à partir da Posição N+1 até a última posição da lista
-   - [:N] seleciona todos os elementos até a Posição N-1 desde a primeira posição da lista
-   - [N:X] seleciona todos os elementos à partir da Posição N até a posição X-1
+## 2.1) Selecionando Múltiplos Elementos
 
-Ex.: lista = ["P", "y", "t", "h", "o", "n"]
-lista[:2] = "P", "y"
-lista[2:] = "t", "h", "o", "n"
-lista[1:3] = "y", "t"
+- Para selecionar elementos individuais:
 
-2.2) Step
-- O Step pode ser utilizado para pular uma quantidade de elementos na contagem da lista
-   - lista[N:X:S] onde S é a quantidade a ser contada, ao invés de 1 a 1
+```python
+from operator import itemgetter
+lista = ["P", "y", "t", "h", "o", "n"]
+print(itemgetter(1, 3, 5)(lista))  # Saída: ('y', 'h', 'n')
+```
 
-Ex.: lista = ["P", "y", "t", "h", "o", "n"]
-lista[0:5:2] = "P", "t", "o"
+- Com list comprehension:
 
-2.3) Inversão de Lista
-- É possível inverter a lista sem o list.reverse, utilizando um step negativo e nenhum parâmetro
+```python
+indices = [1, 3, 5]
+selecionados = [lista[i] for i in indices]
+print(selecionados)  # Saída: ['y', 'h', 'n']
+```
 
-Ex.: lista = ["P", "y", "t", "h", "o", "n"]
-lista[::-1] = "n", "o", "h", "t", "y", "P" 
+## 2.2) Slicing
+
+- `[N:]` → Elementos a partir do índice `N`.
+- `[:N]` → Elementos do início até `N-1`.
+- `[N:X]` → Elementos entre `N` e `X-1`.
+
+```python
+lista = ["P", "y", "t", "h", "o", "n"]
+print(lista[:2])   # Saída: ['P', 'y']
+print(lista[2:])   # Saída: ['t', 'h', 'o', 'n']
+print(lista[1:3])  # Saída: ['y', 't']
+```
+
+## 2.3) Step (Passo)
+
+- `lista[N:X:S]` → `S` define quantos elementos pular.
+
+```python
+lista = ["P", "y", "t", "h", "o", "n"]
+print(lista[0:6:2])  # Saída: ['P', 't', 'o']
+```
+
+## 2.4) Inversão de Lista
+
+- Podemos inverter uma lista usando slicing:
+
+```python
+lista = ["P", "y", "t", "h", "o", "n"]
+lista_invertida = lista[::-1]
+print(lista_invertida)  # Saída: ['n', 'o', 'h', 't', 'y', 'P']
