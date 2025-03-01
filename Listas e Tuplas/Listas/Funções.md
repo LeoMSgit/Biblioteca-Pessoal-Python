@@ -20,15 +20,7 @@ print(lista[2])  # Saída: 't'
 
 ## 2.1) Selecionando Múltiplos Elementos
 
-- Para selecionar elementos individuais:
-
-```python
-from operator import itemgetter
-lista = ["P", "y", "t", "h", "o", "n"]
-print(itemgetter(1, 3, 5)(lista))  # Saída: ('y', 'h', 'n')
-```
-
-- Com list comprehension:
+- Para selecionar elementos individuais utilizamos comprehension, onde criamos uma lista nova baseada na anterior
 
 ```python
 indices = [1, 3, 5]
