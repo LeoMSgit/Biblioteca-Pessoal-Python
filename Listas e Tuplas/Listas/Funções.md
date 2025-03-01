@@ -43,7 +43,7 @@ print(lista[2:])   # Saída: ['t', 'h', 'o', 'n']
 print(lista[1:3])  # Saída: ['y', 't']
 ```
 
-## 2.3) Step (Passo)
+## 2.3) Step/Passo
 
 - `lista[N:X:S]` → `S` define quantos elementos pular
 
