@@ -54,7 +54,7 @@ print(lista[0:6:2])  # Saída: ['P', 't', 'o']
 
 ## 2.4) Inversão de Lista
 
-- Podemos inverter uma lista usando slicing:
+- Podemos inverter uma lista usando slicing e um step negativo, sem o list.reverse(lista)
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n"]
