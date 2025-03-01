@@ -18,7 +18,16 @@ lista = ["P", "y", "t", "h", "o", "n"]
 print(lista[2])  # Saída: 't'
 ```
 
-## 2.1) Selecionando Múltiplos Elementos
+## 2.1) Índices Negativos
+
+- As listas em Python suportam índices negativos para contagem de posição, porém, a contagem começa em -1 na ÚLTIMA POSIÇÃO, diferentemente do 0-Based da contagem convencional
+
+```python
+print(lista[-1]) # Saída: ['n']
+print(lista[-2]) # Saída: ['o']
+```
+
+## 2.2) Selecionando Múltiplos Elementos
 
 - Para selecionar elementos individuais utilizamos comprehension, onde criamos uma lista nova utilizando como parâmetros os elementos nas posições selecionadas
 
@@ -28,7 +37,7 @@ selecionados = [lista[i] for i in indices]
 print(selecionados)  # Saída: ['y', 'h', 'n']
 ```
 
-## 2.2) Slicing/Fatiamento
+## 2.3) Slicing/Fatiamento
 
 - Podemos selecionar determinados segmentos da lista utilizando comandos como: 
 
@@ -43,7 +52,7 @@ print(lista[2:])   # Saída: ['t', 'h', 'o', 'n']
 print(lista[1:3])  # Saída: ['y', 't']
 ```
 
-## 2.3) Step/Passo
+## 2.4) Step/Passo
 
 - `lista[N:X:S]` → `S` define quantos elementos pular
 
@@ -52,7 +61,7 @@ lista = ["P", "y", "t", "h", "o", "n"]
 print(lista[0:6:2])  # Saída: ['P', 't', 'o']
 ```
 
-## 2.4) Inversão de Lista
+## 2.5) Inversão de Lista
 
 - Podemos inverter uma lista usando slicing e um step negativo, sem o list.reverse(lista)
 
@@ -60,4 +69,29 @@ print(lista[0:6:2])  # Saída: ['P', 't', 'o']
 lista = ["P", "y", "t", "h", "o", "n"]
 lista_invertida = lista[::-1]
 print(lista_invertida)  # Saída: ['n', 'o', 'h', 't', 'y', 'P']
+```
+
+## 3) Listas Aninhadas
+
+- Listas podem conter diversos tipos de dados, inclusive outras listas, desse modo é possível criar estruturas bidimensionais como matrizes
+
+```python
+Ex.: Matriz = [
+[1, 2, 3]
+["a", "b", "c"]
+["△", "□", "◯"]
+]
+```
+
+- A lista Matriz contém outras três listas Numeros = [1, 2, 3], Letras = ["a", "b", "c"], Simbolos = ["△", "□", "◯"]
+
+## 3.1) Acessando Matrizes
+
+- Para acessar um elemento de uma estrutura bidimensional utilizamos como parâmetros a qual das listas ele pertence e a posição do elemento
+
+```python
+Ex.: Matriz[0]  # Saída: [1, 2, 3]    OU SEJA a LISTA na POSIÇÃO 0
+Matriz[0][0]  # Saída: [1]   OU SEJA a LISTA na POSIÇÃO 0 e o ELEMENTOda na POSIÇÃO 0
+Matriz[1][-1] # Saída: ['c']   OU SEJA a LISTA na POSIÇÃO 1 e o ELEMENTOda na POSIÇÃO -1 (Última posição da Lista)
+Matriz[-1][-2] # Saída: ['□']   OU SEJA a LISTA na POSIÇÃO -1 (Última lista) e o ELEMENTO na POSIÇÃO -2 (Penúltima posição da Lista)
 ```
