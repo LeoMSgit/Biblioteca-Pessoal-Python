@@ -11,7 +11,7 @@ print(lista)  # Saída: ['P', 'y', 't', 'h', 'o', 'n']
 ## 2) Seleção de Elementos por Posição
 
 - O primeiro elemento tem índice **0** (Python usa indexação baseada em zero)
-- Acessamos um elemento com `lista[N]`
+- Acessamos um elemento com o comando: `lista[N]`
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n"]
@@ -54,6 +54,9 @@ print(lista[1:3])  # Saída: ['y', 't']
 
 ## 2.4) Step/Passo
 
+- Step permite alterar quantas possições serão percorridas por passagem na lista
+   - Normalmente a contagem acontece de 1 em 1
+
 - `lista[N:X:S]` → `S` define quantos elementos pular
 
 ```python
@@ -93,7 +96,7 @@ Ex.: Matriz = [
 
 ```python
 Ex.: Matriz[0]  # Saída: [1, 2, 3]    OU SEJA a LISTA na POSIÇÃO 0
-Matriz[0][0]  # Saída: [1]   OU SEJA a LISTA na POSIÇÃO 0 e o ELEMENTOda na POSIÇÃO 0
-Matriz[1][-1] # Saída: ['c']   OU SEJA a LISTA na POSIÇÃO 1 e o ELEMENTOda na POSIÇÃO -1 (Última posição da Lista)
+Matriz[0][0]  # Saída: [1]   OU SEJA a LISTA na POSIÇÃO 0 e o ELEMENTO na POSIÇÃO 0
+Matriz[1][-1] # Saída: ['c']   OU SEJA a LISTA na POSIÇÃO 1 e o ELEMENTO na POSIÇÃO -1 (Última posição da Lista)
 Matriz[-1][-2] # Saída: ['□']   OU SEJA a LISTA na POSIÇÃO -1 (Última lista) e o ELEMENTO na POSIÇÃO -2 (Penúltima posição da Lista)
 ```
