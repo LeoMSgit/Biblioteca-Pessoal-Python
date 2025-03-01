@@ -1,0 +1,47 @@
+1) Os widget gráfico, incluem:
+
+Label
+Button
+Entry
+Text
+Checkbutton
+Radiobutton
+Listbox
+Spinbox
+Scale
+Scrollbar
+Canvas
+Frame
+Toplevel
+PanedWindow
+LabelFrame
+
+2) 2️⃣ Gerenciadores de Layout (Layouts.md)
+Explicação sobre os três principais métodos de organização de widgets:
+
+pack() (organiza em blocos)
+grid() (organiza em tabela)
+place() (posicionamento absoluto)
+
+3) 3️⃣ Variáveis e Controle de Estados (Variaveis_Tkinter.md)
+Explicação sobre classes como:
+
+StringVar()
+IntVar()
+DoubleVar()
+BooleanVar()
+Como atualizar e obter valores dinamicamente.
+
+4) Estilização com ttk.Style (Estilizacao_Tkinter.md)
+Como personalizar a interface com ttk.Style, incluindo:
+
+Modificação de botões, labels e frames
+Cores, fontes e tamanhos
+Estilização de Progressbar, Treeview, entre outros
+
+5) Eventos e Bindings (Eventos_Tkinter.md)
+Explicação sobre como lidar com eventos do usuário, incluindo:
+
+bind("<Button-1>") (clique do mouse)
+bind("<KeyPress>") (tecla pressionada)
+after() (eventos programados)
