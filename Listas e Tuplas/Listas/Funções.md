@@ -20,7 +20,7 @@ print(lista[2])  # Saída: 't'
 
 ## 2.1) Selecionando Múltiplos Elementos
 
-- Para selecionar elementos individuais utilizamos comprehension, onde criamos uma lista nova baseada na anterior
+- Para selecionar elementos individuais utilizamos comprehension, onde criamos uma lista nova utilizando como parâmetros os elementos nas posições selecionadas
 
 ```python
 indices = [1, 3, 5]
