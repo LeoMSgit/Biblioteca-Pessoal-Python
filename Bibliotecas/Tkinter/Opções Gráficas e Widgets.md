@@ -6,7 +6,7 @@ Este documento reúne as principais funcionalidades do Tkinter, incluindo widget
 Os widgets são os componentes gráficos usados para criar interfaces no Tkinter. Abaixo estão os principais:
 
 ### 1.1 Label
-Exibe um texto ou imagem na interface.
+Exibe um texto ou imagem na interface
 ```python
 from tkinter import Tk, Label
 
@@ -17,7 +17,7 @@ root.mainloop()
 ```
 
 ### 1.2 Button
-Cria um botão interativo.
+Cria um botão interativo
 ```python
 from tkinter import Tk, Button
 
@@ -31,7 +31,7 @@ root.mainloop()
 ```
 
 ### 1.3 Entry
-Campo de entrada de texto para o usuário.
+Campo de entrada de texto para o usuário
 ```python
 from tkinter import Tk, Entry
 
@@ -42,7 +42,7 @@ root.mainloop()
 ```
 
 ### 1.4 Frame
-Contêiner para agrupar outros widgets.
+Contêiner para agrupar outros widgets
 ```python
 from tkinter import Tk, Frame, Label
 
@@ -55,7 +55,7 @@ root.mainloop()
 ```
 
 ### 1.5 Checkbutton
-Botão de seleção com opção ativada/desativada.
+Botão de seleção com opção ativada/desativada
 ```python
 from tkinter import Tk, Checkbutton, IntVar
 
@@ -67,7 +67,7 @@ root.mainloop()
 ```
 
 ### 1.6 Radiobutton
-Botão de seleção única dentro de um grupo.
+Botão de seleção única dentro de um grupo
 ```python
 from tkinter import Tk, Radiobutton, IntVar
 
@@ -81,7 +81,7 @@ root.mainloop()
 ```
 
 ### 1.7 Listbox
-Lista de opções para o usuário.
+Lista de opções para o usuário
 ```python
 from tkinter import Tk, Listbox
 
@@ -94,7 +94,7 @@ root.mainloop()
 ```
 
 ### 1.8 Progressbar
-Indicador de progresso.
+Indicador de progresso
 ```python
 from tkinter import Tk, ttk
 
@@ -106,31 +106,31 @@ root.mainloop()
 ```
 
 ## 2. Gerenciadores de Layout
-O Tkinter possui três métodos principais para organizar widgets na interface.
+O Tkinter possui três métodos principais para organizar widgets na interface
 
 ### 2.1 Pack
-Organiza os elementos em blocos.
+Organiza os elementos em blocos
 ```python
 widget.pack(side="top", fill="x")
 ```
 
 ### 2.2 Grid
-Organiza os elementos em uma grade.
+Organiza os elementos em uma grade
 ```python
 widget.grid(row=0, column=1)
 ```
 
 ### 2.3 Place
-Posicionamento absoluto com coordenadas.
+Posicionamento absoluto com coordenadas
 ```python
 widget.place(x=50, y=100)
 ```
 
 ## 3. Controle de Variáveis
-O Tkinter utiliza variáveis especiais para armazenar valores dinâmicos.
+O Tkinter utiliza variáveis especiais para armazenar valores dinâmicos
 
 ### 3.1 StringVar
-Armazena e atualiza strings.
+Armazena e atualiza strings
 ```python
 from tkinter import Tk, StringVar, Entry
 
@@ -143,7 +143,7 @@ root.mainloop()
 ```
 
 ### 3.2 IntVar
-Armazena números inteiros.
+Armazena números inteiros
 ```python
 from tkinter import Tk, IntVar, Checkbutton
 
@@ -155,7 +155,7 @@ root.mainloop()
 ```
 
 ## 4. Estilização com ttk.Style
-A biblioteca ttk permite personalizar a aparência dos widgets.
+A biblioteca ttk permite personalizar a aparência dos widgets
 
 Os estilos disponíveis no Windows são: 'winnative', 'clam', 'alt', 'default', 'classic', 'vista', 'xpnative'
 
@@ -171,7 +171,7 @@ root.mainloop()
 ```
 
 ## 5. Eventos e Bindings
-O Tkinter permite associar eventos aos widgets, como cliques ou pressionamento de teclas.
+O Tkinter permite associar eventos aos widgets, como cliques ou pressionamento de teclas
 
 ### 5.1 Bind para Clique do Mouse
 ```python
@@ -200,7 +200,7 @@ root.mainloop()
 ```
 
 ### 5.3 Uso de after para Delays
-Permite criar atrasos, animações, atualizações periódicas e evitar o uso de time.sleep(), que pode congelar a interface.
+Permite criar atrasos, animações, atualizações periódicas e evitar o uso de time.sleep(), que pode congelar a interface
 ```python
 from tkinter import Tk, Label
 
