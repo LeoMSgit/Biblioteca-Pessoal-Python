@@ -60,3 +60,4 @@ print(lista[0:6:2])  # Saída: ['P', 't', 'o']
 lista = ["P", "y", "t", "h", "o", "n"]
 lista_invertida = lista[::-1]
 print(lista_invertida)  # Saída: ['n', 'o', 'h', 't', 'y', 'P']
+```
