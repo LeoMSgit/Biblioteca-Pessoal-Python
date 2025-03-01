@@ -199,7 +199,8 @@ root.bind("<KeyPress>", tecla_pressionada)
 root.mainloop()
 ```
 
-### 5.3 Uso de after para Execução Programada
+### 5.3 Uso de after para Delays
+Permite criar atrasos, animações, atualizações periódicas e evitar o uso de time.sleep(), que pode congelar a interface.
 ```python
 from tkinter import Tk, Label
 
