@@ -10,8 +10,8 @@ print(lista)  # Saída: ['P', 'y', 't', 'h', 'o', 'n']
 
 ## 2) Seleção de Elementos por Posição
 
-- O primeiro elemento tem índice **0** (Python usa indexação baseada em zero).
-- Acessamos um elemento com `lista[N]`.
+- O primeiro elemento tem índice **0** (Python usa indexação baseada em zero)
+- Acessamos um elemento com `lista[N]`
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n"]
@@ -45,7 +45,7 @@ print(lista[1:3])  # Saída: ['y', 't']
 
 ## 2.3) Step (Passo)
 
-- `lista[N:X:S]` → `S` define quantos elementos pular.
+- `lista[N:X:S]` → `S` define quantos elementos pular
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n"]
