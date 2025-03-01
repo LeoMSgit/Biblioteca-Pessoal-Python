@@ -156,6 +156,7 @@ root.mainloop()
 
 ## 4. Estilização com ttk.Style
 A biblioteca ttk permite personalizar a aparência dos widgets.
+
 Os estilos disponíveis no Windows são: 'winnative', 'clam', 'alt', 'default', 'classic', 'vista', 'xpnative'
 
 ```python
