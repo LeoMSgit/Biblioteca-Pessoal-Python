@@ -28,7 +28,9 @@ selecionados = [lista[i] for i in indices]
 print(selecionados)  # Saída: ['y', 'h', 'n']
 ```
 
-## 2.2) Slicing
+## 2.2) Slicing/Fatiamento
+
+- Podemos selecionar determinados segmentos da lista utilizando comandos como: 
 
 - `[N:]` → Elementos a partir do índice `N`.
 - `[:N]` → Elementos do início até `N-1`.
