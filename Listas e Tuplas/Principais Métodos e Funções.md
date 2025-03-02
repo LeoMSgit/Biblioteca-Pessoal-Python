@@ -52,7 +52,9 @@ print(lista)
 # Saída: ["P", "y", "t", "h", "o", "o", "n", 1, 2, 3, 4, 5]
 ```
 Aqui apenas a primeira ocorrência do elemento `"o"` foi removida
-<br/><br/>
+<br/>
+<br/>
+<br/>
 ```python
 lista = [1, 2, 3, 4, 2, 5, 2, 6, 2, 7]
 valor_remover = 2
