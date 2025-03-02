@@ -52,7 +52,7 @@ print(lista)
 # Saída: ["P", "y", "t", "h", "o", "o", "n", 1, 2, 3, 4, 5]
 ```
 Aqui apenas a primeira ocorrência do elemento `"o"` foi removida
-
+<br/><br/>
 ```python
 lista = [1, 2, 3, 4, 2, 5, 2, 6, 2, 7]
 valor_remover = 2
@@ -61,6 +61,7 @@ while valor_remover in lista:
     lista.remove(valor_remover)
 
 print(lista)
+# Saída: [1, 3, 4, 5, 6, 7]
 ```
 Aqui o loop `while` continuará a remover o elemento `2`, até que ele não seja mais encontrado na lista
 
@@ -71,15 +72,16 @@ Aqui o loop `while` continuará a remover o elemento `2`, até que ele não seja
 lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
 lista.pop()  
 print(lista)  
-# Saída: ["P", "y", "t", "h", "n", 1, 2, 3, 4]
+# Saída: ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4]
 ```
 Aqui o elemento `5`, na última posição, foi removido da lista
+<br/>
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
 lista.pop(2)  
 print(lista)  
-# Saída: ["P", "y", "h", "n", 1, 2, 3, 4. 5]
+# Saída: ["P", "y", "h", "o", "n", 1, 2, 3, 4, 5]
 ```
 Aqui o elemento `"t"`, na posição 2, foi removido da lista
 
@@ -92,3 +94,6 @@ print(lista)
 # Saída: []
 ```
 
+# 4) Ordenação e Reversão
+## 4.1) .sort(lista)
+- 
