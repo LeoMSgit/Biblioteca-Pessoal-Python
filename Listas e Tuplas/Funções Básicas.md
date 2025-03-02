@@ -106,7 +106,7 @@ Matriz[-1][-2] # Saída: ['□']   OU SEJA a LISTA na POSIÇÃO -1 (Última list
 # 4) Iteração de Listas
 
 - O método mais comum de percorrer uma lista é com um loop `for`
-  - Outras maneiras podem ser mais eficientes como a Compreensão de Listas (List Comprehension)
+  - Outras maneiras podem ser mais eficientes, como a Compreensão de Listas (List Comprehension), porém são mais complexos de se implementar
 
 ```python
 Ex.: lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -114,4 +114,4 @@ Ex.: lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for elemento in lista:
   print(elemento)        # SAÍDA = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
-A lista `lista` é percorrida e se todos os elementos presente na lista são percorridos e retornados no print
+A lista `lista` é percorrida e todos os elementos presente na lista são lidos e retornados no print
