@@ -75,7 +75,7 @@ print(lista)
 # Saída: ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4]
 ```
 Aqui o elemento `5`, na última posição, foi removido da lista
-<br/>
+<br/> <br/>
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
