@@ -1,6 +1,6 @@
 # 1) Definição
 
-- Diferentemente de C e Java, listas em Python NÃO são Arrays, pois permitem o armazenamento de diferentes tipos de dados em uma única estrutura(como inteiros, pontos flutuantes, booleanos, strings e até outras listas) e têm tamanhos variáveis
+- Diferentemente de C e Java, listas em Python NÃO são Arrays, pois permitem o armazenamento de diferentes tipos de dados em uma única estrutura (como inteiros, pontos flutuantes, booleanos, strings e até outras listas) e têm tamanhos variáveis
 - Python usa indexação baseada em zero (Zero-Based Indexing), isto é o primeiro elemento tem índice **0**
 - Listas, por padrão, têm modelo FILO, First-In-Last-Out, ou seja, elas na verdade se comportam como **PILHAS**, quando adicionamos ou retiramos elementos
    - Porém, utilizando a biblioteca "collections", conseguimos o formato "deque", que segue o modelo FIFO, First-In-First-Out
