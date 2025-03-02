@@ -1,5 +1,9 @@
 ## 1) Definição
 
+- Listas em Python são Arrays que permitem o armazenamento de diferentes tipos de dados em uma única estrutura, ela permite inteiros, pontos flutuantes, booleanos, strings e outros
+- Python usa indexação baseada em zero (Zero-Based), isto é o primeiro elemento tem índice **0**
+- Listas têm modelo FILO, First-In-Last-Out, ou seja, elas na verdade se comportam como **PILHAS**
+
 ```python
 lista = ["elemento1", "elemento2", "elemento3", ..., "elementoN"]
 lista = list("Python")  # Cria uma lista onde cada letra da string se torna um elemento
@@ -8,7 +12,6 @@ print(lista)  # Saída: ['P', 'y', 't', 'h', 'o', 'n']
 
 ## 2) Seleção de Elementos por Posição
 
-- O primeiro elemento tem índice **0** (Python usa indexação baseada em zero)
 - Acessamos um elemento com o comando: `lista[N]`
 
 ```python
