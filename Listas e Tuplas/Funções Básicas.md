@@ -102,3 +102,16 @@ Matriz[0][0]  # Saída: [1]   OU SEJA a LISTA na POSIÇÃO 0 e o ELEMENTO na POS
 Matriz[1][-1] # Saída: ['c']   OU SEJA a LISTA na POSIÇÃO 1 e o ELEMENTO na POSIÇÃO -1 (Última posição da Lista)
 Matriz[-1][-2] # Saída: ['□']   OU SEJA a LISTA na POSIÇÃO -1 (Última lista) e o ELEMENTO na POSIÇÃO -2 (Penúltima posição da Lista)
 ```
+
+## 4) Iteração de Listas
+
+- O método mais comum de percorrer uma lista é com um loop `for`
+  - Outras maneiras podem ser mais eficientes como a Compreensão de Listas (List Comprehension)
+
+```python
+Ex.: lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for elemento in lista:
+  print(elemento)        # SAÍDA = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+A lista `lista` é percorrida e se todos os elementos presente na lista são percorridos e retornados no print
