@@ -1,8 +1,9 @@
 ## Coleção de Notas e Guias para Utilização e Consulta Rápida de Python.
 
-Esse é um projeto pessoal para aprimorar minhas habilidades e facilitar a criação de códigos no futuro.
+- Projeto pessoal para aprimorar minhas habilidades e facilitar a criação de códigos no futuro.
 
-Essa Biblioteca é de Domínio Público e pode ser compartilhada e utilizada por qualquer usuário que ache útil.
+
+- Essa Biblioteca é de Domínio Público e pode ser compartilhada e utilizada por qualquer usuário que ache útil.
 
 Todo e qualquer feedback é bem-vindo!
 
