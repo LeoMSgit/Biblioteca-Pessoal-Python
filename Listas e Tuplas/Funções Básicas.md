@@ -11,7 +11,7 @@ lista = list("Python")  # Cria uma lista onde cada letra da string se torna um e
 print(lista)  # Saída: ['P', 'y', 't', 'h', 'o', 'n']
 ```
 
-## 2) Seleção de Elementos por Posição
+# 2) Seleção de Elementos por Posição
 
 - Acessamos um elemento com o comando: `lista[N]`
 
@@ -76,7 +76,7 @@ lista_invertida = lista[::-1]
 print(lista_invertida)  # Saída: ['n', 'o', 'h', 't', 'y', 'P']
 ```
 
-## 3) Listas Aninhadas
+# 3) Listas Aninhadas
 
 - Listas podem conter diversos tipos de dados, inclusive outras listas, desse modo é possível criar estruturas bidimensionais como matrizes
 
@@ -103,7 +103,7 @@ Matriz[1][-1] # Saída: ['c']   OU SEJA a LISTA na POSIÇÃO 1 e o ELEMENTO na P
 Matriz[-1][-2] # Saída: ['□']   OU SEJA a LISTA na POSIÇÃO -1 (Última lista) e o ELEMENTO na POSIÇÃO -2 (Penúltima posição da Lista)
 ```
 
-## 4) Iteração de Listas
+# 4) Iteração de Listas
 
 - O método mais comum de percorrer uma lista é com um loop `for`
   - Outras maneiras podem ser mais eficientes como a Compreensão de Listas (List Comprehension)
