@@ -101,5 +101,5 @@ print(lista)
 ```
 
 # 4) Ordenação e Reversão
-## 4.1) .sort(lista)
+## 4.1) .sort()
 - 
