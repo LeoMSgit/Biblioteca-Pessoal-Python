@@ -2,10 +2,10 @@
 
 Projeto pessoal para aprimorar minhas habilidades e facilitar a criação de códigos no futuro.
 
+<br/>
+<br/>
 
-
-
-Essa Biblioteca é de Domínio Público e pode ser compartilhada e utilizada por qualquer usuário que ache útil.
+Essa Biblioteca é de Domínio Público e pode ser compartilhada e utilizada por qualquer usuário que assim desejar.
 
 Todo e qualquer feedback é bem-vindo!
 
