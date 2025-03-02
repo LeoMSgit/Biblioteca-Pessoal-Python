@@ -41,15 +41,54 @@ print(lista)
 Aqui a lista `nova_lista` é "colada" ao final da lista original, resultando em `[..., 4, 5, 4, 5, 7, 8]`
 
 # 3) Remover Elementos 
-## 3.1) remove(elemento)
+## 3.1) .remove(elemento)
 - Remove a primeira ocorrência do elemento na lista
+  - Para remover **TODOS** os elementos desejados da lista, é necessário criar um loop utilizando `while`
+
+```python
+lista = ["P", "y", "t", "h", "o", "o", "o", "n", 1, 2, 3, 4, 5]
+lista.remove("o")  
+print(lista)  
+# Saída: ["P", "y", "t", "h", "o", "o", "n", 1, 2, 3, 4, 5]
+```
+Aqui apenas a primeira ocorrência do elemento `"o"` foi removida
+
+```python
+lista = [1, 2, 3, 4, 2, 5, 2, 6, 2, 7]
+valor_remover = 2
+
+while valor_remover in lista:
+    lista.remove(valor_remover)
+
+print(lista)
+```
+Aqui o loop `while` continuará a remover o elemento `2`, até que ele não seja mais encontrado na lista
+
+## 3.2) .pop() ou .pop(index)
+- Por padrão, remove o `último` elemento da lista. Porém pode utilizar um `index` para escolher uma posição para ser eliminada
 
 ```python
 lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
-lista.remove("o")  
+lista.pop()  
 print(lista)  
-# Saída: ["P", "y", "t", "h", "n", 1, 2, 3, 4, 5]
+# Saída: ["P", "y", "t", "h", "n", 1, 2, 3, 4]
+```
+Aqui o elemento `5`, na última posição, foi removido da lista
+
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.pop(2)  
+print(lista)  
+# Saída: ["P", "y", "h", "n", 1, 2, 3, 4. 5]
+```
+Aqui o elemento `"t"`, na posição 2, foi removido da lista
+
+## 3.3) .clear()
+- Remove completamante **TODOS** os elementos da lista, deixando-a vazia,mas mantendo a referência à lista original
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.clear()
+print(lista)
+# Saída: []
 ```
 
-
-- pop(i): Remove e retorna o elemento na posição i (se omitido, remove o último).
