@@ -21,7 +21,7 @@ print(lista)
 lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
 lista.insert(3, "X")  
 print(lista)  
-# Saída: ["P", "y", "t", "X", "h", "o", "n", 1, 2, 3, 4, 5, 6]
+# Saída: ["P", "y", "t", "X", "h", "o", "n", 1, 2, 3, 4, 5]
 ```
 Aqui o elemento `X` é insereido na poisção `3`, os outros elementos posteriores são movidos em uma posição
 
