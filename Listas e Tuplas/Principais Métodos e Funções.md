@@ -2,7 +2,7 @@
 - Em Python, métodos são funções características de um certo objeto e são utilizadas para realizar operações nesse objeto. No caso de listas, os métodos são usados para modificar, buscar, ordenar ou manipular os elementos dentro delas
 - Os métodos de listas são chamados utilizando a sintaxe de ponto (.)
 
-# 2) Manipulação de Listas
+# 2) Adicionar Elementos
 ## 2.1) .append(elemento)
 - Adiciona um `elemento` ao final da lista
   
@@ -40,7 +40,16 @@ print(lista)
 ```
 Aqui a lista `nova_lista` é "colada" ao final da lista original, resultando em `[..., 4, 5, 4, 5, 7, 8]`
 
-- extend(): Adiciona múltiplos elementos ao final da lista.
-- insert(i, elemento): Insere um elemento na posição i.
-- remove(valor): Remove a primeira ocorrência do valor na lista.
+# 3) Remover Elementos 
+## 3.1) remove(elemento)
+- Remove a primeira ocorrência do elemento na lista
+
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.remove("o")  
+print(lista)  
+# Saída: ["P", "y", "t", "h", "n", 1, 2, 3, 4, 5]
+```
+
+
 - pop(i): Remove e retorna o elemento na posição i (se omitido, remove o último).
