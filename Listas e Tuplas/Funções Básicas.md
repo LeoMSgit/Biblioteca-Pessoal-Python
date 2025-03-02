@@ -1,4 +1,4 @@
-## 1) Definição
+# 1) Definição
 
 - Diferentemente de C e Java, listas em Python NÃO são Arrays, pois permitem o armazenamento de diferentes tipos de dados em uma única estrutura(como inteiros, pontos flutuantes, booleanos, strings e até outras listas) e têm tamanhos variáveis
 - Python usa indexação baseada em zero (Zero-Based Indexing), isto é o primeiro elemento tem índice **0**
