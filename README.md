@@ -1,4 +1,4 @@
-Coleção de Notas e Guias para Utilização e Consulta Rápida para Python.
+## Coleção de Notas e Guias para Utilização e Consulta Rápida de Python.
 
 Esse é um projeto pessoal para aprimorar minhas habilidades e facilitar a criação de códigos no futuro.
 
