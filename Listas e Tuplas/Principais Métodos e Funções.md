@@ -150,7 +150,7 @@ print(lista)
 
 ### 4.2.1) 🛑 Problema com Case-Sensitive
 - Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII
-  - Para evitar o problema das maiúsculas e minúsculas, podemos passar parâmetros especiais `".sort(key=str.lower"`
+  - Para evitar o problema das maiúsculas e minúsculas, podemos passar parâmetros especiais `".sort(key=str.lower)"`
 ```python
 lista = ["Banana", "abacaxi", "Uva", "laranja"]
 lista.sort()
