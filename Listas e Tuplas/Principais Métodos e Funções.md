@@ -5,12 +5,18 @@
 # 2) Adicionar Elementos
 ## 2.1) .append(elemento)
 - Adiciona um `elemento` ao final da lista
+  - Caso outra lista seja adicionada com .append, ela será adicionada como uma lista aninhada, mas seus elementos não serão inseridos diretamente na lista principal
   
 ```python
 lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
 lista.append(6)  
 print(lista)  
 # Saída: ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 6]
+```
+```python
+lista = [1, 2, 3]
+lista.append([4, 5])
+print(lista)  # Saída: [1, 2, 3, [4, 5]] 
 ```
 
 ## 2.2) .insert(index, elemento)
