@@ -81,3 +81,18 @@ Essas estruturas podem ser classificadas em categorias básicas e avançadas
 ### **Árvores e Grafos**
 - Estruturas hierárquicas para organizar dados de forma eficiente
 - Utilizadas em bancos de dados, redes e inteligência artificial
+
+---
+
+📌 Métodos e Suporte em Diferentes Estruturas de Dados
+Método	Listas (list)	Tuplas (tuple)	Conjuntos (set)	Dicionários (dict)	Deque (collections.deque)	Filas (queue.Queue)
+.append()	✅	❌	❌ (.add())	❌ (.update())	✅	❌ (.put())
+.pop()	✅	❌	✅ (Remove aleatório)	✅ (.pop(key))	✅	❌ (.get())
+.remove()	✅	❌	✅	❌	✅	❌
+.insert()	✅	❌	❌	❌	❌	❌
+.extend()	✅	❌	❌	❌	✅	❌
+.clear()	✅	❌	✅	✅	✅	❌
+.sort()	✅	❌	❌	❌	❌	❌
+.reverse()	✅	❌	❌	❌	✅	❌
+.count()	✅	✅	❌	❌	❌	❌
+.index()	✅	✅	❌	❌	❌	❌
