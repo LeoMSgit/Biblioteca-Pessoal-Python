@@ -1,0 +1,268 @@
+# 1) Definição
+- Em Python, métodos são funções características de um certo objeto e são utilizadas para realizar operações nesse objeto. No caso de listas, os métodos são usados para modificar, buscar, ordenar ou manipular os elementos dentro delas
+- Os métodos de listas são chamados utilizando a sintaxe de ponto (.)
+
+# 2) Adicionar Elementos
+## 2.1) .append(elemento)
+- Adiciona um `elemento` ao final da lista
+  - Ao adicionar uma `string`, ela será adicionada como um único elemento
+  - Caso outra lista seja adicionada com .append, ela será adicionada como uma lista aninhada, mas seus elementos não serão inseridos diretamente na lista principal
+  
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.append(6)  
+print(lista)  
+# Saída: ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 6]
+```
+```python
+lista = [1, 2, 3]
+lista.append([4, 5])
+print(lista)  # Saída: [1, 2, 3, [4, 5]] 
+```
+
+## 2.2) .insert(index, elemento)
+- Insere um elemento `elemento` em uma posição `index` específica e "empurra" os outros elementos para a próxima posição
+  - Caso seja utilizado um `index` maior do que o tamanho da lista, o Python não gerará erro, em vez disso, o elemento será adicionado ao final da lista, como se tivéssemos usado `.append(elemento)`
+
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.insert(3, "X")  
+print(lista)  
+# Saída: ["P", "y", "t", "X", "h", "o", "n", 1, 2, 3, 4, 5]
+```
+Aqui o elemento `X` é inserido na poisção `3`, os outros elementos posteriores são movidos em uma posição
+
+
+## 2.3) .extend(nova_lista)
+- Concatena/Adiciona outra lista a sua lista original
+  - Ao passar uma string, ela será dividida em caracteres pois será considerada uma nova lista
+  - Diferentemente do set(lista), .extend **NÃO** remove as duplicatas, ele irá apenas juntar uma lista no final da outra
+ 
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+nova_lista = [4, 5, 7, 8]
+lista.extend(nova_lista)  
+print(lista)  
+# Saída: ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 4, 5, 7, 8]
+```
+
+Aqui a lista `nova_lista` é "colada" ao final da lista original, resultando em `[..., 4, 5, 4, 5, 7, 8]`
+
+```python
+lista = [1, 2, 3]
+lista.extend("abc")
+print(lista)  # Saída: [1, 2, 3, 'a', 'b', 'c'] 
+```
+
+# 3) Remover Elementos 
+## 3.1) .remove(elemento)
+- Remove a primeira ocorrência do elemento na lista
+  - Para remover **TODOS** os elementos desejados da lista, é necessário criar um loop utilizando `while`
+
+```python
+lista = ["P", "y", "t", "h", "o", "o", "o", "n", 1, 2, 3, 4, 5]
+lista.remove("o")  
+print(lista)  
+# Saída: ["P", "y", "t", "h", "o", "o", "n", 1, 2, 3, 4, 5]
+```
+Aqui apenas a primeira ocorrência do elemento `"o"` foi removida
+
+<br/>
+<br/>
+<br/>
+
+```python
+lista = [1, 2, 3, 4, 2, 5, 2, 6, 2, 7]
+valor_remover = 2
+
+while valor_remover in lista:
+    lista.remove(valor_remover)
+
+print(lista)
+# Saída: [1, 3, 4, 5, 6, 7]
+```
+Aqui o loop `while` continuará a remover o elemento `2`, até que ele não seja mais encontrado na lista
+
+## 3.2) .pop() ou .pop(index)
+- Por padrão, remove o `último` elemento da lista. Porém pode utilizar um `index` para escolher uma posição para ser eliminada
+
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.pop()  
+print(lista)  
+# Saída: ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4]
+```
+Aqui o elemento `5`, na última posição, foi removido da lista
+<br/>
+<br/>
+<br/>
+
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.pop(2)  
+print(lista)  
+# Saída: ["P", "y", "h", "o", "n", 1, 2, 3, 4, 5]
+```
+Aqui o elemento `"t"`, na posição 2, foi removido da lista
+
+## 3.3) .clear()
+- Remove completamante **TODOS** os elementos da lista, deixando-a vazia,mas mantendo a referência à lista original
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+lista.clear()
+print(lista)
+# Saída: []
+```
+
+# 4) Ordenação e Reversão
+## 4.1) .reverse()
+- Inverte a posição dos elementos na lista sem ordenar
+  - `.reverse()`, inverte a própria lista e não pode ser usado como parâmetro para criar uma nova lista, ao invés disso podemos utilizar o slicing `lista[::-1]`
+```python
+lista = [5, 2, 9, 1, 7]
+lista.reverse()
+print(lista)
+# Saída: [7, 1, 9, 2, 5]
+```
+```python
+lista = [1, 2, 3]
+nova_lista = lista[::-1]   # Cria uma nova lista invertida
+print(nova_lista)          # Saída: [3, 2, 1]
+print(lista)               # Saída: [1, 2, 3]     (original permanece inalterada)
+```
+
+## 4.2) .sort()
+- Ordena os elementos da lista de forma crescente, funciona tanto para números quanto para palavras (baseado na tabela ASCII)
+  - Ao tentar ordenar listas mistas (strings e números) ocorrerá um `TypeError`
+
+```python
+lista = [5, 2, 9, 1, 7]
+lista.sort()
+print(lista)
+# Saída: [1, 2, 5, 7, 9]
+```
+```python
+lista = ["banana", "abacaxi", "uva", "laranja"]
+lista.sort()
+print(lista)  
+# Saída: ['abacaxi', 'banana', 'laranja', 'uva']
+```
+
+### 4.2.1) 🛑 Problema com Case-Sensitive
+- Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII
+  - Para evitar o problema das maiúsculas e minúsculas, podemos passar parâmetros especiais `".sort(key=str.lower)"`
+```python
+lista = ["Banana", "abacaxi", "Uva", "laranja"]
+lista.sort()
+print(lista)
+# Saída: ['Banana', 'Uva', 'abacaxi', 'laranja']  # Maiúsculas antes de minúsculas
+```
+```python
+lista.sort(key=str.lower)
+print(lista)
+# Saída: ['abacaxi', 'Banana', 'laranja', 'Uva']
+```
+
+## 4.3) .sort(reverse=True)
+- Ao passar o parâmtro `reverse=True`, o método `.sort` ordena os elementos da lista de forma decrescente
+
+```python
+lista = [5, 2, 9, 1, 7]
+lista.sort(reverse=True)
+print(lista)
+# Saída: [9, 7, 5, 2, 1]
+```
+```python
+lista = ["banana", "abacaxi", "uva", "laranja"]
+lista.sort(reverse=True)
+print(lista)  
+# Saída: ['uva', 'laranja', 'banana', 'abacaxi']
+```
+
+# 5) Pesquisa e Contagem
+## 5.1) .index(elemento)
+- Retorna a posição da primeira ocorrência de um `elemento` na lista na forma de uma nova variável
+  - Similiarmente ao `.remove()`, para obter **TODOS** as posições de certo `elemento` na lista, é necessário criar um loop
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+posicao_elemento = lista.index("y")
+print(posicao_elemento)
+# Saída: 1
+```
+```python
+lista = [1, 2, 3, 2, 4, 2, 5, 6, 2]
+valor_procurado = 2
+posicoes = []
+
+for i in range(len(lista)):
+    if lista[i] == valor_procurado:
+        posicoes.append(i)
+
+print(posicoes)
+# Saída: [1, 3, 5, 8]
+```
+Aqui a cada passagem do loop, um `elemento` será comparado com a variável `valor_procurado`, caso ele seja igual, sua posição será adicionada com `.append()` a uma nova lista, resultando na lista `posicoes = [1, 3, 5, 8]`
+
+## 5.1) .count(elemento)
+- Conta quantas vezes `elemento` aparece na lista
+- Faz diferenciação entre maiúsculas e minúsculas, pois a comparação em Python é case-sensitive
+  - Para contar todas as variações independentemente de maiúsculas e minúsculas, é necessário modificar os elementos usando lower(), diferentemente do `.sort()`,  `.count()` não aceita um argumento `key`
+
+```python
+lista = [1, 2, 3, 1, 2, 1, 4, 5]
+contagem = numeros.count(1)
+print(contagem)
+# Saída: 3 (o número 1 aparece três vezes)
+```
+
+```python
+lista = ["Python", "python", "PYTHON", "PyThOn", "python"]
+print(lista.count("python"))
+# Saída: 2
+```
+```python
+lista = ["Python", "python", "PYTHON", "PyThOn", "python"]
+valor_procurado = "python"
+contagem = sum(1 for elemento in lista if elemento.lower() == valor_procurado.lower())
+
+print(contagem)
+# Saída: 5
+```
+Aqui utilizando Compreensão de Listas contamos todas as ocorrências ignorando maiúsculas e minúsculas
+
+
+# 6) Cópia
+## 6.1) copy()
+- Cria uma cópia independente da lista, ou seja, alterações na cópia não afetam a lista original
+```python
+lista_original = [1, 2, 3]
+lista_copia = lista_original.copy()
+
+lista_copia.append(4)  
+print(lista_original)  # Saída: [1, 2, 3] (original permanece inalterada)
+print(lista_copia)  # Saída: [1, 2, 3, 4] (cópia foi modificada)
+```
+
+### 6.1.1) 🛑 Problema com = (Atribuição direta)
+- Quando utilizamos `lista_b = lista_a`, não estamos criando uma cópia da lista, em vez disso, `lista_b` apenas aponta para a mesma lista na memória. Isso significa que qualquer alteração em `lista_b` também afetará `lista_a`
+
+```python
+lista_a = [1, 2, 3]
+lista_b = lista_a  # Atribuição direta
+
+lista_b.append(4)  # Alteramos lista_b
+
+print(lista_a)  # Saída: [1, 2, 3, 4]  ❌ A lista original também foi alterada!
+print(lista_b)  # Saída: [1, 2, 3, 4]
+```
+### 6.1.2) 🛑 Problema com Listas Aninhadas 
+- Se a lista for aninhada (ou seja, contiver outras listas dentro), `.copy()` copia apenas a lista principal, mas as listas internas ainda são compartilhadas entre `lista_a` e `lista_b`
+  - Nesse caso precisamos importar a biblioteca `copy` e utilizar `deepcopy()`
+
+```python
+lista_b = copy.deepcopy(lista_a)
+lista_b[0].append(99)
+
+print(lista_a)  # Saída: [[1, 2, 3], [4, 5, 6]]      (original permanece inalterada)
+print(lista_b)  # Saída: [[1, 2, 3, 99], [4, 5, 6]]  (cópia foi modificada)
+```
