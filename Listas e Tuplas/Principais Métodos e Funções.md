@@ -28,7 +28,7 @@ Aqui o elemento `X` é insereido na poisção `3`, os outros elementos posterior
 
 ## 2.3) .extend(nova_lista)
 - Concatena/Adiciona outra lista a sua lista original
-  - Diferentemente do .set(), .extend **NÃO** remove as duplicatas, ele irá apenas juntar uma lista no final da outra
+  - Diferentemente do set(lista), .extend **NÃO** remove as duplicatas, ele irá apenas juntar uma lista no final da outra
  
 ```python
 lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
@@ -101,5 +101,129 @@ print(lista)
 ```
 
 # 4) Ordenação e Reversão
-## 4.1) .sort()
-- 
+## 4.1) .reverse()
+- Inverte a posição dos elementos na lista sem ordenar
+```python
+lista = [5, 2, 9, 1, 7]
+lista.sort()
+print(lista)
+# Saída: [7, 1, 9, 2, 5]
+```
+## 4.2) .sort()
+- Ordena os elementos da lista de forma crescente, funciona tanto para números quanto para palavras (baseado na tabela ASCII)
+- Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII 
+```python
+lista = [5, 2, 9, 1, 7]
+lista.sort()
+print(lista)
+# Saída: [1, 2, 5, 7, 9]
+```
+```python
+lista = ["banana", "abacaxi", "uva", "laranja"]
+lista.sort()
+print(lista)  
+# Saída: ['abacaxi', 'banana', 'laranja', 'uva']
+```
+## 4.3) .sort(reverse=True)
+- Ao passar o parâmtro `reverse=True`, o método `.sort` ordena os elementos da lista de forma decrescente
+
+```python
+lista = [5, 2, 9, 1, 7]
+lista.sort()
+print(lista)
+# Saída: [9, 7, 5, 2, 1]
+```
+```python
+lista = ["banana", "abacaxi", "uva", "laranja"]
+lista.sort()
+print(lista)  
+# Saída: ['uva', 'laranja', 'banana', 'abacaxi']
+```
+
+# 5) Pesquisa e Contagem
+## 5.1) .index(elemento)
+- Retorna a posição da primeira ocorrência de um `elemento` na lista na forma de uma nova variável
+  - Similiarmente ao `.remove()`, para obter **TODOS** as posições de certo `elemento` na lista, é necessário criar um loop
+```python
+lista = ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5]
+posicao_elemento = lista.index("y")
+print(posicao_elemento)
+# Saída: 1
+```
+```python
+lista = [1, 2, 3, 2, 4, 2, 5, 6, 2]
+valor_procurado = 2
+posicoes = []
+
+for i in range(len(lista)):
+    if lista[i] == valor_procurado:
+        posicoes.append(i)
+
+print(posicoes)
+# Saída: [1, 3, 5, 8]
+```
+Aqui a cada passagem do loop, um `elemento` será comparado com a variável `valor_procurado`, caso ele seja igual, sua posição será adicionada com `.append()` a uma nova lista, resultando na lista `posicoes = [1, 3, 5, 8]`
+
+## 5.1) .count(elemento)
+- Conta quantas vezes `elemento` aparece na lista
+- Faz diferenciação entre maiúsculas e minúsculas, pois a comparação em Python é case-sensitive
+  - Para contar todas as variações independentemente de maiúsculas e minúsculas, é necessário modificar os elementos usando lower()
+
+```python
+lista = [1, 2, 3, 1, 2, 1, 4, 5]
+contagem = numeros.count(1)
+print(contagem)
+# Saída: 3 (o número 1 aparece três vezes)
+```
+
+```python
+lista = ["Python", "python", "PYTHON", "PyThOn", "python"]
+print(lista.count("python"))
+# Saída: 2
+```
+```python
+lista = ["Python", "python", "PYTHON", "PyThOn", "python"]
+valor_procurado = "python"
+contagem = sum(1 for elemento in lista if elemento.lower() == valor_procurado.lower())
+
+print(contagem)
+# Saída: 5
+```
+Aqui utilizando Compreensão de Listas contamos todas as ocorrências ignorando maiúsculas e minúsculas
+
+
+# 6) Cópia
+#6.1) copy()
+- Cria uma cópia independente da lista, ou seja, alterações na cópia não afetam a lista original
+```python
+lista_original = [1, 2, 3]
+lista_copia = original.copy()
+
+copia.append(4)  
+print(original)  # Saída: [1, 2, 3] (original permanece inalterado)
+print(copia)  # Saída: [1, 2, 3, 4] (cópia foi modificada)
+```
+
+# 6.2) 🛑 Problema com = (Atribuição direta)
+- Quando utilizamos `lista_b = lista_a`, não estamos criando uma cópia da lista, em vez disso, `lista_b` apenas aponta para a mesma lista na memória. Isso significa que qualquer alteração em `lista_b` também afetará `lista_a`
+
+```python
+lista_a = [1, 2, 3]
+lista_b = lista_a  # Atribuição direta
+
+lista_b.append(4)  # Alteramos lista_b
+
+print(lista_a)  # Saída: [1, 2, 3, 4]  ❌ A lista original também foi alterada!
+print(lista_b)  # Saída: [1, 2, 3, 4]
+```
+# 6.3) 🛑 Problema com Listas Aninhadas 
+- Se a lista for aninhada (ou seja, contiver outras listas dentro), `.copy()` copia apenas a lista principal, mas as listas internas ainda são compartilhadas entre `lista_a` e `lista_b`
+  - Nesse caso precisamos importar a biblioteca `copy` e utilizar `deepcopy()`
+
+```python
+lista_b = copy.deepcopy(lista_a)
+lista_b[0].append(99)
+
+print(lista_a)  # Saída: [[1, 2, 3], [4, 5, 6]]      (original permanece inalterado)
+print(lista_b)  # Saída: [[1, 2, 3, 99], [4, 5, 6]]  (cópia foi modificada)
+```
