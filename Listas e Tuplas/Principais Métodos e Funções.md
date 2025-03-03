@@ -217,7 +217,7 @@ Aqui utilizando Compreensão de Listas contamos todas as ocorrências ignorando 
 
 
 # 6) Cópia
-#6.1) copy()
+# 6.1) copy()
 - Cria uma cópia independente da lista, ou seja, alterações na cópia não afetam a lista original
 ```python
 lista_original = [1, 2, 3]
