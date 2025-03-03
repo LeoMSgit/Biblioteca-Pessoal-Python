@@ -44,9 +44,15 @@ nova_lista = [4, 5, 7, 8]
 lista.extend(nova_lista)  
 print(lista)  
 # Saída: ["P", "y", "t", "h", "o", "n", 1, 2, 3, 4, 5, 4, 5, 7, 8]
-
 ```
+
 Aqui a lista `nova_lista` é "colada" ao final da lista original, resultando em `[..., 4, 5, 4, 5, 7, 8]`
+
+```python
+lista = [1, 2, 3]
+lista.extend("abc")
+print(lista)  # Saída: [1, 2, 3, 'a', 'b', 'c'] 
+```
 
 # 3) Remover Elementos 
 ## 3.1) .remove(elemento)
@@ -111,12 +117,20 @@ print(lista)
 # 4) Ordenação e Reversão
 ## 4.1) .reverse()
 - Inverte a posição dos elementos na lista sem ordenar
+  - .reverse(), inverte a própria lista e não pode ser usado como parâmetro para criar uma nova lista, ao invés disso podemos utilizar o slicing [::-1]
 ```python
 lista = [5, 2, 9, 1, 7]
 lista.sort()
 print(lista)
 # Saída: [7, 1, 9, 2, 5]
 ```
+```python
+lista = [1, 2, 3]
+nova_lista = lista[::-1]   # Cria uma nova lista invertida
+print(nova_lista)          # Saída: [3, 2, 1]
+print(lista)               # Saída: [1, 2, 3]     (original permanece inalterada)
+```
+
 ## 4.2) .sort()
 - Ordena os elementos da lista de forma crescente, funciona tanto para números quanto para palavras (baseado na tabela ASCII)
   - Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII
@@ -210,7 +224,7 @@ lista_original = [1, 2, 3]
 lista_copia = original.copy()
 
 copia.append(4)  
-print(original)  # Saída: [1, 2, 3] (original permanece inalterado)
+print(original)  # Saída: [1, 2, 3] (original permanece inalterada)
 print(copia)  # Saída: [1, 2, 3, 4] (cópia foi modificada)
 ```
 
@@ -234,6 +248,6 @@ print(lista_b)  # Saída: [1, 2, 3, 4]
 lista_b = copy.deepcopy(lista_a)
 lista_b[0].append(99)
 
-print(lista_a)  # Saída: [[1, 2, 3], [4, 5, 6]]      (original permanece inalterado)
+print(lista_a)  # Saída: [[1, 2, 3], [4, 5, 6]]      (original permanece inalterada)
 print(lista_b)  # Saída: [[1, 2, 3, 99], [4, 5, 6]]  (cópia foi modificada)
 ```
