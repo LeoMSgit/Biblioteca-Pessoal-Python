@@ -1,7 +1,7 @@
 # Tuplas em Python
 
-Tuplas são estruturas de dados imutáveis em Python, usadas para armazenar uma sequência ordenada de elementos. Diferente das listas, que podem ser modificadas (mutáveis), as tuplas são fixas após a sua criação, tornando-as mais eficientes e seguras para armazenar dados que não devem ser alterados
-Tuplas são representadas com parênteses `minha_tupla(1,2,3,4,5)`
+- Tuplas são estruturas de dados imutáveis em Python, usadas para armazenar uma sequência ordenada de elementos. Diferente das listas, que podem ser modificadas (mutáveis), as tuplas são fixas após a sua criação, tornando-as mais eficientes e seguras para armazenar dados que não devem ser alterados
+- Tuplas são representadas com parênteses `minha_tupla(1,2,3,4,5)`
 
 
 ## Características das Tuplas
