@@ -30,7 +30,7 @@ lista.insert(3, "X")
 print(lista)  
 # Saída: ["P", "y", "t", "X", "h", "o", "n", 1, 2, 3, 4, 5]
 ```
-Aqui o elemento `X` é insereido na poisção `3`, os outros elementos posteriores são movidos em uma posição
+Aqui o elemento `X` é inserido na poisção `3`, os outros elementos posteriores são movidos em uma posição
 
 
 ## 2.3) .extend(nova_lista)
@@ -117,10 +117,10 @@ print(lista)
 # 4) Ordenação e Reversão
 ## 4.1) .reverse()
 - Inverte a posição dos elementos na lista sem ordenar
-  - .reverse(), inverte a própria lista e não pode ser usado como parâmetro para criar uma nova lista, ao invés disso podemos utilizar o slicing [::-1]
+  - `.reverse()`, inverte a própria lista e não pode ser usado como parâmetro para criar uma nova lista, ao invés disso podemos utilizar o slicing `lista[::-1]`
 ```python
 lista = [5, 2, 9, 1, 7]
-lista.sort()
+lista.reverse()
 print(lista)
 # Saída: [7, 1, 9, 2, 5]
 ```
@@ -133,7 +133,6 @@ print(lista)               # Saída: [1, 2, 3]     (original permanece inalterad
 
 ## 4.2) .sort()
 - Ordena os elementos da lista de forma crescente, funciona tanto para números quanto para palavras (baseado na tabela ASCII)
-  - Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII
   - Ao tentar ordenar listas mistas (strings e números) ocorrerá um `TypeError`
 
 ```python
@@ -148,18 +147,34 @@ lista.sort()
 print(lista)  
 # Saída: ['abacaxi', 'banana', 'laranja', 'uva']
 ```
+
+### 4.2.1) 🛑 Problema com Case-Sensitive
+- Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII
+  - Para evitar o problema das maiúsculas e minúsculas, podemos passar parâmetros especiais `".sort(key=str.lower"`
+```python
+lista = ["Banana", "abacaxi", "Uva", "laranja"]
+lista.sort()
+print(lista)
+# Saída: ['Banana', 'Uva', 'abacaxi', 'laranja']  # Maiúsculas antes de minúsculas
+```
+```python
+lista.sort(key=str.lower)
+print(lista)
+# Saída: ['abacaxi', 'Banana', 'laranja', 'Uva']
+```
+
 ## 4.3) .sort(reverse=True)
 - Ao passar o parâmtro `reverse=True`, o método `.sort` ordena os elementos da lista de forma decrescente
 
 ```python
 lista = [5, 2, 9, 1, 7]
-lista.sort()
+lista.sort(reverse=True)
 print(lista)
 # Saída: [9, 7, 5, 2, 1]
 ```
 ```python
 lista = ["banana", "abacaxi", "uva", "laranja"]
-lista.sort()
+lista.sort(reverse=True)
 print(lista)  
 # Saída: ['uva', 'laranja', 'banana', 'abacaxi']
 ```
@@ -191,7 +206,7 @@ Aqui a cada passagem do loop, um `elemento` será comparado com a variável `val
 ## 5.1) .count(elemento)
 - Conta quantas vezes `elemento` aparece na lista
 - Faz diferenciação entre maiúsculas e minúsculas, pois a comparação em Python é case-sensitive
-  - Para contar todas as variações independentemente de maiúsculas e minúsculas, é necessário modificar os elementos usando lower()
+  - Para contar todas as variações independentemente de maiúsculas e minúsculas, é necessário modificar os elementos usando lower(), diferentemente do `.sort()`,  `.count()` não aceita um argumento `key`
 
 ```python
 lista = [1, 2, 3, 1, 2, 1, 4, 5]
@@ -217,18 +232,18 @@ Aqui utilizando Compreensão de Listas contamos todas as ocorrências ignorando 
 
 
 # 6) Cópia
-# 6.1) copy()
+## 6.1) copy()
 - Cria uma cópia independente da lista, ou seja, alterações na cópia não afetam a lista original
 ```python
 lista_original = [1, 2, 3]
-lista_copia = original.copy()
+lista_copia = lista_original.copy()
 
-copia.append(4)  
-print(original)  # Saída: [1, 2, 3] (original permanece inalterada)
-print(copia)  # Saída: [1, 2, 3, 4] (cópia foi modificada)
+lista_copia.append(4)  
+print(lista_original)  # Saída: [1, 2, 3] (original permanece inalterada)
+print(lista_copia)  # Saída: [1, 2, 3, 4] (cópia foi modificada)
 ```
 
-# 6.2) 🛑 Problema com = (Atribuição direta)
+### 6.1.1) 🛑 Problema com = (Atribuição direta)
 - Quando utilizamos `lista_b = lista_a`, não estamos criando uma cópia da lista, em vez disso, `lista_b` apenas aponta para a mesma lista na memória. Isso significa que qualquer alteração em `lista_b` também afetará `lista_a`
 
 ```python
@@ -240,7 +255,7 @@ lista_b.append(4)  # Alteramos lista_b
 print(lista_a)  # Saída: [1, 2, 3, 4]  ❌ A lista original também foi alterada!
 print(lista_b)  # Saída: [1, 2, 3, 4]
 ```
-# 6.3) 🛑 Problema com Listas Aninhadas 
+### 6.1.2) 🛑 Problema com Listas Aninhadas 
 - Se a lista for aninhada (ou seja, contiver outras listas dentro), `.copy()` copia apenas a lista principal, mas as listas internas ainda são compartilhadas entre `lista_a` e `lista_b`
   - Nesse caso precisamos importar a biblioteca `copy` e utilizar `deepcopy()`
 
