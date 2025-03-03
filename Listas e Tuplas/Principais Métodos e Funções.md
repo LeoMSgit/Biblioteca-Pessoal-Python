@@ -5,6 +5,7 @@
 # 2) Adicionar Elementos
 ## 2.1) .append(elemento)
 - Adiciona um `elemento` ao final da lista
+  - Ao adicionar uma `string`, ela será adicionada como um único elemento
   - Caso outra lista seja adicionada com .append, ela será adicionada como uma lista aninhada, mas seus elementos não serão inseridos diretamente na lista principal
   
 ```python
@@ -34,6 +35,7 @@ Aqui o elemento `X` é insereido na poisção `3`, os outros elementos posterior
 
 ## 2.3) .extend(nova_lista)
 - Concatena/Adiciona outra lista a sua lista original
+  - Ao passar uma string, ela será dividida em caracteres pois será considerada uma nova lista
   - Diferentemente do set(lista), .extend **NÃO** remove as duplicatas, ele irá apenas juntar uma lista no final da outra
  
 ```python
@@ -117,7 +119,9 @@ print(lista)
 ```
 ## 4.2) .sort()
 - Ordena os elementos da lista de forma crescente, funciona tanto para números quanto para palavras (baseado na tabela ASCII)
-- Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII 
+  - Maiúsculas vêm antes das minúsculas, segundo a ordem da tabela ASCII
+  - Ao tentar ordenar listas mistas (strings e números) ocorrerá um `TypeError`
+
 ```python
 lista = [5, 2, 9, 1, 7]
 lista.sort()
