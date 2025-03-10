@@ -24,8 +24,9 @@ Essas estruturas podem ser classificadas em categorias básicas e avançadas
   ```
 
 ### **Dicionários (`dict`)**
-- Mapeia pares de chave-valor
-- Permite acesso rápido aos valores pelas chaves
+- Estrutura não ordenada e mutável
+- Mapeia pares de chave-valor no formato `{chave1: valor1, chave2: valor2}`
+  - Cada chave é única e permite acesso rápido aos valores pelas chaves
 - Exemplo:
   ```python
   dicionario = {"nome": "Ana", "idade": 25}
