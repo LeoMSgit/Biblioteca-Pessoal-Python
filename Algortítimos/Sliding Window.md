@@ -1,9 +1,28 @@
-## O que é o “Sliding Window”?
+# Versão Resumida
+Como funciona o registro e validação das janelas
+Quando uma janela válida é encontrada (ou seja, ela contém todos os caracteres de t nas quantidades necessárias), essa janela é registrada (geralmente armazenamos seu tamanho e posições left e right).
+
+Então tentamos reduzir essa janela movendo left para a direita, para ver se é possível obter uma janela menor que ainda seja válida.
+
+Se ao remover o caractere em left a janela ainda continuar válida, atualizamos o registro da menor janela (se for menor) e continuamos a mover left.
+
+Se ao remover esse caractere a janela deixar de ser válida (porque perdemos um caractere necessário), paramos de contrair, pois qualquer janela menor que isso não conteria todos os caracteres exigidos.
+
+Nesse momento, avançamos right para expandir novamente a janela e tentar encontrar outra janela válida.
+
+Portanto:
+A menor janela só é confirmada quando não conseguimos mais contrair a janela sem perder a validade.
+
+Enquanto houver janelas válidas ao contrair, continuamos tentando diminuir.
+
+O algoritmo garante que ao final, a menor janela possível terá sido encontrada porque o right varreu toda a string, e o left contraia a janela ao máximo em cada etapa válida.
+
+---
+
+# O que é o “Sliding Window”?
 
 Em estruturas sequenciais (strings, listas, arrays, streams) um **sliding window** (“janela deslizante”) é um intervalo **contíguo** delimitado por dois índices — normalmente chamados **`left`** (início) e **`right`** (fim).
 Enquanto percorremos a sequência, movemos um ou ambos os ponteiros para **expandir** ou **contrair** a janela, calculando estatísticas ou testando condições **em tempo O(1)** por passo, em vez de recomputar tudo do zero.
-
----
 
 ## 1. Anatomia da Técnica
 
