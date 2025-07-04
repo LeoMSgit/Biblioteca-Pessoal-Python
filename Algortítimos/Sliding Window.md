@@ -1,19 +1,15 @@
 # Versão Resumida
-Como funciona o registro e validação das janelas
+
+1. Ambas left e right começam da esquerda
+2. Right percorre array até que o Counter(array), conte que cada item da busca desejada seja encontrado na array de busca, esse processo se chama 'expand'
+3. Ao encontrar uma solução válida right é parado no ponto final da "sub-array" chamada de Window
+4. Left começa a percorrer a array e, a cada iteração, remove um elemento da Window, esse processo se chama 'contract'. Caso a remoção desse elemento gere uma solução não válida por parte do Counter, podemos afirmar que:
+  - Essa não é a menor janela válida possível
+  - O right ainda não chegou em sua posição final definitiva
+5. O right realiza novamente o processo de 'expand', continuar avançando na array até que uma solução seja encontrada pelo Counter(array)
+6. O left realiza novamente o processo de 'contract', continuar removendo elementos da array até que uma solução não se possa mais remover elementos da Window
 Quando uma janela válida é encontrada (ou seja, ela contém todos os caracteres de t nas quantidades necessárias), essa janela é registrada (geralmente armazenamos seu tamanho e posições left e right).
-
-Então tentamos reduzir essa janela movendo left para a direita, para ver se é possível obter uma janela menor que ainda seja válida.
-
-Se ao remover o caractere em left a janela ainda continuar válida, atualizamos o registro da menor janela (se for menor) e continuamos a mover left.
-
-Se ao remover esse caractere a janela deixar de ser válida (porque perdemos um caractere necessário), paramos de contrair, pois qualquer janela menor que isso não conteria todos os caracteres exigidos.
-
-Nesse momento, avançamos right para expandir novamente a janela e tentar encontrar outra janela válida.
-
-Portanto:
-A menor janela só é confirmada quando não conseguimos mais contrair a janela sem perder a validade.
-
-Enquanto houver janelas válidas ao contrair, continuamos tentando diminuir.
+7. O right continua assim até o fim da array.
 
 O algoritmo garante que ao final, a menor janela possível terá sido encontrada porque o right varreu toda a string, e o left contraia a janela ao máximo em cada etapa válida.
 
