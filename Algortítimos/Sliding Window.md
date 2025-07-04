@@ -1,4 +1,4 @@
-## 📚 O que é o “Sliding Window”?
+## O que é o “Sliding Window”?
 
 Em estruturas sequenciais (strings, listas, arrays, streams) um **sliding window** (“janela deslizante”) é um intervalo **contíguo** delimitado por dois índices — normalmente chamados **`left`** (início) e **`right`** (fim).
 Enquanto percorremos a sequência, movemos um ou ambos os ponteiros para **expandir** ou **contrair** a janela, calculando estatísticas ou testando condições **em tempo O(1)** por passo, em vez de recomputar tudo do zero.
